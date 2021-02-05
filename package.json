@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@codersrank/summary": "^0.9.11",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -10,17 +11,30 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "devicon": "^2.2.0",
+    "devicon-react-svg": "^0.2.3",
+    "grommet": "^2.16.2",
+    "grommet-icons": "^4.5.0",
+    "grommet-styles": "^0.2.0",
+    "polished": "^4.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-particles-js": "^3.4.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-spring": "^9.0.0-rc.3",
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
     "typescript": "^4.0.3",
+    "typewriter-effect": "^2.17.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start -FAST_REFRESH=true",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts}' --quiet --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +53,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.7",
+    "@types/styled-system": "^5.1.10",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "babel-plugin-styled-components": "^1.12.0",
+    "customize-cra": "^1.0.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "prettier": "^2.2.1",
+    "react-app-rewired": "^2.1.8",
+    "typescript-plugin-styled-components": "^1.4.4"
   }
 }
