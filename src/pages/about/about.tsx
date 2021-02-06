@@ -43,9 +43,14 @@ export const About = (): ReactElement => {
               <PhotoImage />
             </Box>
             <Box width={setForDevice<string>(['100%', '50%'], size)} pad={{left: 'medium'}}>
-              <Box>
+              <Box pad={{bottom: 'medium'}}>
                 <Box align={setForDevice<BoxProps['align']>(['center', 'start'], size)}>
-                  <Heading level="2" margin={{bottom: 'medium', top: 'none'}} color="accent-1">
+                  <Heading
+                    level="2"
+                    margin={{bottom: 'medium', top: 'none'}}
+                    color="accent-1"
+                    textAlign="center"
+                  >
                     Hola, Soy Pablo Allendes
                   </Heading>
                 </Box>
@@ -60,15 +65,15 @@ export const About = (): ReactElement => {
                   aliquam magnam. Saepe nobis dolore nesciunt sed!
                 </Text>
               </Box>
-              <Box pad={{vertical: 'medium'}} direction="row">
+              <Box pad={{vertical: 'medium'}} direction="row" justify="center">
                 <Box pad={{right: 'small'}}>
-                  <Instagram />
+                  <Instagram color="accent-1" />
                 </Box>
                 <Box pad={{right: 'small'}}>
-                  <Github />
+                  <Github color="accent-1" />
                 </Box>
                 <Box>
-                  <Linkedin />
+                  <Linkedin color="accent-1" />
                 </Box>
               </Box>
               <Box

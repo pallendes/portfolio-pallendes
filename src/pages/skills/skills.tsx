@@ -1,11 +1,14 @@
-import React, {ReactElement} from 'react';
-import {Box, Heading, Image} from 'grommet';
+import React, {ReactElement, useContext} from 'react';
+import {Box, Heading, Image, ResponsiveContext, Text} from 'grommet';
 import {Particle, TechIcon} from '../../components/atoms';
+import {setForDevice} from '../../common/utils';
 
 export const Skills = (): ReactElement => {
+  const size = useContext(ResponsiveContext);
+
   return (
     <>
-      <Particle />
+      {/* <Particle /> */}
       <Box background="linear-gradient(0deg, rgba(125,76,219,1) 0%, rgba(253,111,255,1) 99%)" fill>
         <Box
           direction="column"
@@ -17,16 +20,24 @@ export const Skills = (): ReactElement => {
           id="skills"
         >
           <Box justify="center" pad={{bottom: 'medium'}}>
-            <Heading color="accent-1" level="1">
+            <Heading color="accent-1" level="1" textAlign="center">
               Professional <b>Skillset</b>
             </Heading>
           </Box>
           <Box>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quod perferendis
-            aspernatur ullam id fuga perspiciatis reprehenderit, cum aliquid asperiores repellendus
-            aliquam neque explicabo eos dolorum fugiat inventore? Maxime, porro?
+            <Text color="accent-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quod perferendis
+              aspernatur ullam id fuga perspiciatis reprehenderit, cum aliquid asperiores
+              repellendus aliquam neque explicabo eos dolorum fugiat inventore? Maxime, porro?
+            </Text>
           </Box>
-          <Box pad="small" direction="row" width="100%" justify="center" wrap>
+          <Box
+            pad={setForDevice(['none', 'small'], size)}
+            direction="row"
+            width="100%"
+            justify="center"
+            wrap
+          >
             <TechIcon icon="devicon-react-original-wordmark" />
             <TechIcon icon="devicon-javascript-plain" />
             <TechIcon icon="devicon-html5-plain-wordmark" />

@@ -34,7 +34,7 @@ export const TechIcon = ({icon}: {icon: string}): ReactElement => {
   const size = useContext<string>(ResponsiveContext);
 
   return (
-    <Box width={setForDevice<string>(['33%', '20%'], size)}>
+    <Box width={setForDevice<string>(['auto', 'auto', '20%'], size)}>
       <StyledIcon className={icon}></StyledIcon>
     </Box>
   );

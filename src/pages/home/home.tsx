@@ -23,7 +23,7 @@ export const Home = (): ReactElement => {
           height="100vh"
         >
           <AppBar />
-          <Particle />
+          {/* <Particle /> */}
           <Box
             width={{width: '100%', max: '1140px'}}
             align="center"
@@ -33,55 +33,63 @@ export const Home = (): ReactElement => {
             id="home"
           >
             <Box
-              direction={size === 'large' ? 'row' : 'column'}
+              direction={setForDevice<BoxProps['direction']>(['column', 'column', 'row'], size)}
               width="100%"
-              height={size === 'large' ? '90%' : 'auto'}
-              pad={setForDevice<string>(['large', 'unset'], size)}
+              justify="around"
+              height={setForDevice<string>(['100%', '100%', '90%'], size)}
+              pad={setForDevice<string>(['large', 'large', 'unset'], size)}
             >
               <Box
                 justify="center"
-                align={setForDevice<BoxProps['align']>(['center', 'start'], size)}
-                width={setForDevice<string>(['100%', '60%'], size)}
+                align={setForDevice<BoxProps['align']>(['center', 'center', 'start'], size)}
+                width={setForDevice<string>(['100%', '100%', '60%'], size)}
+                style={{minHeight: 'auto', zIndex: 1}}
                 margin={setForDevice<Record<string, string>>(
-                  [{bottom: 'xlarge'}, {bottom: 'unset'}],
+                  [{bottom: 'medium'}, {bottom: 'medium'}, {bottom: 'unset'}],
                   size,
                 )}
               >
-                <Box pad={{bottom: 'small'}}>
+                <Box
+                  margin={setForDevice<Record<string, string>>(
+                    [{bottom: 'medium'}, {bottom: 'medium'}, {bottom: 'small'}],
+                    size,
+                  )}
+                >
                   <Text
                     color="accent-3"
                     size={setForDevice<string>(['1.8em', '2.8em'], size)}
                     weight="bold"
-                    margin={setForDevice<Record<string, string>>(
-                      [{bottom: 'medium'}, {bottom: 'small'}],
-                      size,
-                    )}
                   >
                     Hello world!
                   </Text>
                 </Box>
-                <Text
-                  color="accent-3"
-                  size={setForDevice<string>(['2.4em', '3.2em'], size)}
-                  weight="bold"
+                <Box
+                  margin={setForDevice<Record<string, string>>(
+                    [{bottom: 'medium'}, {bottom: 'medium'}, {bottom: 'small'}],
+                    size,
+                  )}
                 >
-                  I&apos;M PABLO ALLENDES
-                </Text>
-                <Box pad={{top: 'medium'}}>
+                  <Text
+                    color="accent-3"
+                    textAlign="center"
+                    size={setForDevice<string>(['2.4em', '3.2em'], size)}
+                    weight="bold"
+                  >
+                    I&apos;M
+                    <br /> PABLO ALLENDES
+                  </Text>
+                </Box>
+                <Box>
                   <Text
                     color="accent-2"
                     size={setForDevice<string>(['1.8em', '2.8em'], size)}
                     weight="bold"
+                    textAlign="center"
                   >
                     <Typewriter
                       onInit={() => null}
                       options={{
-                        strings: [
-                          'Front-end Engineer',
-                          'NodeJS developer',
-                          'React developer',
-                          'Deep Learning enthusiast',
-                        ],
+                        strings: ['Front-end Engineer', 'NodeJS developer', 'React developer'],
                         autoStart: true,
                         loop: true,
                         deleteSpeed: 50,
@@ -91,19 +99,17 @@ export const Home = (): ReactElement => {
                 </Box>
               </Box>
               <Box
-                height="100%"
-                width={setForDevice<string>(['100%', '40%'], size)}
+                width={setForDevice<string>(['100%', '100%', '40%'], size)}
                 justify="center"
+                align="center"
               >
-                <Box
-                  background="url(/home-main.svg)"
-                  height="560px"
-                  width="560px"
-                  alignSelf="center"
-                ></Box>
+                <img
+                  src="/home-main.svg"
+                  width={setForDevice<string>(['240px', '380px', '560px'], size)}
+                />
               </Box>
             </Box>
-            <Box width="100%" pad="medium" height="10%">
+            <Box width="100%" pad={setForDevice<string>(['unset', 'medium'], size)} height="10%">
               <Box align="center">
                 <Button icon={<Down />} primary size="small" style={{zIndex: 2}} />
               </Box>
