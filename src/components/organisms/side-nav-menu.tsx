@@ -47,6 +47,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
         <Nav direction="column" justify="end">
           <Box pad={{bottom: 'medium'}}>
             <Anchor
+              size="large"
               label="Home"
               href="#home"
               icon={<Home />}
@@ -56,6 +57,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           </Box>
           <Box pad={{bottom: 'medium'}}>
             <Anchor
+              size="large"
               label="About"
               href="#about"
               icon={<User />}
@@ -65,6 +67,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           </Box>
           <Box pad={{bottom: 'medium'}}>
             <Anchor
+              size="large"
               label="Skills"
               href="#skills"
               icon={<Launch />}
@@ -74,6 +77,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           </Box>
           <Box pad={{bottom: 'medium'}}>
             <Anchor
+              size="large"
               label="Experience"
               href="#experience"
               icon={<Briefcase />}
@@ -83,6 +87,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           </Box>
           <Box pad={{bottom: 'medium'}}>
             <Anchor
+              size="large"
               label="Resume"
               href="#"
               icon={<DocumentText />}

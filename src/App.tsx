@@ -4,7 +4,7 @@ import {grommet, Grommet} from 'grommet';
 import {deepMerge} from 'grommet/utils';
 import GlobalStyle from './common/global-style';
 
-import {Home} from './pages/home';
+import {Main} from './pages/main';
 
 const App = (): ReactElement => {
   const customBreackpoints = deepMerge(grommet, {
@@ -25,7 +25,7 @@ const App = (): ReactElement => {
         <Router>
           <Switch>
             <Route path="/">
-              <Home />
+              <Main />
             </Route>
           </Switch>
         </Router>

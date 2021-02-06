@@ -26,6 +26,7 @@ export const ExperienceRow = ({
         [{bottom: 'large'}, {bottom: 'medium'}, {}],
         size,
       )}
+      style={{zIndex: 1}}
     >
       <Box
         width={setForDevice<string>(['100%', '30%'], size)}

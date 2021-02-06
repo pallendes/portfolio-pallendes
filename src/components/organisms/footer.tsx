@@ -1,8 +1,8 @@
 import React, {ReactElement} from 'react';
 
-import {Grommet as GrommetIcon, FacebookOption, Instagram, Twitter} from 'grommet-icons';
+import {FacebookOption, Instagram, LinkedinOption} from 'grommet-icons';
 
-import {Anchor, Box, Footer as GrommetFooter, grommet, Grommet, Main, Text} from 'grommet';
+import {Anchor, Box, Footer as GrommetFooter, Text} from 'grommet';
 
 const Media = (): ReactElement => (
   <Box direction="row" gap="xxsmall" justify="center">
@@ -19,30 +19,31 @@ const Media = (): ReactElement => (
     <Anchor
       a11yTitle="Follow us on Twitter"
       href="https://twitter.com/"
-      icon={<Twitter color="brand" />}
+      icon={<LinkedinOption color="brand" />}
     />
   </Box>
 );
 
 export const Footer = (): ReactElement => (
-  <GrommetFooter background="light-4" pad="small">
-    <Box
-      width={{width: '100%', max: '1140px'}}
-      align="center"
-      justify="between"
-      direction="row"
-      margin="auto"
-    >
-      <Box align="center" direction="row" gap="xsmall">
-        <GrommetIcon color="brand" size="medium" />
-        <Text alignSelf="center" color="brand" size="small">
-          Grommet
+  <Box style={{zIndex: 10}}>
+    <GrommetFooter background="light-4" pad="small">
+      <Box
+        width={{width: '100%', max: '1140px'}}
+        align="center"
+        justify="between"
+        direction="row"
+        margin="auto"
+      >
+        <Box align="center" direction="row" gap="xsmall" border={{color: 'brand'}} pad="small">
+          <Text alignSelf="center" color="brand" size="large" weight="bold">
+            Pa.
+          </Text>
+        </Box>
+        <Media />
+        <Text textAlign="center" size="xsmall">
+          ©Copyright
         </Text>
       </Box>
-      <Media />
-      <Text textAlign="center" size="xsmall">
-        ©Copyright
-      </Text>
-    </Box>
-  </GrommetFooter>
+    </GrommetFooter>
+  </Box>
 );

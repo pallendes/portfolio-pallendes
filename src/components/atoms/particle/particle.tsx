@@ -1,60 +1,69 @@
-import React, {ReactElement} from 'react';
+import React, {ReactElement, useLayoutEffect, useState} from 'react';
 import Particles from 'react-particles-js';
 
 import './particle.css';
 
-export const Particle = (): ReactElement => (
-  <Particles
-    params={{
-      particles: {
-        number: {
-          value: 160,
-          density: {
+export const Particle = (): ReactElement => {
+  const [pageHeight, setPageHeight] = useState<number>(0);
+
+  useLayoutEffect(() => {
+    setPageHeight(document.getElementById('page')?.clientHeight || 0);
+  });
+
+  return (
+    <Particles
+      height={`${pageHeight}px`}
+      params={{
+        particles: {
+          number: {
+            value: 160,
+            density: {
+              enable: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              speed: 4,
+              size_min: 0.3,
+            },
+          },
+          line_linked: {
             enable: false,
           },
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            speed: 4,
-            size_min: 0.3,
+          move: {
+            random: true,
+            speed: 1,
+            direction: 'top',
+            out_mode: 'out',
           },
         },
-        line_linked: {
-          enable: false,
-        },
-        move: {
-          random: true,
-          speed: 1,
-          direction: 'top',
-          out_mode: 'out',
-        },
-      },
-      interactivity: {
-        events: {
-          onhover: {
-            enable: true,
-            mode: 'bubble',
+        interactivity: {
+          events: {
+            onhover: {
+              enable: true,
+              mode: 'bubble',
+            },
+            onclick: {
+              enable: true,
+              mode: 'repulse',
+            },
           },
-          onclick: {
-            enable: true,
-            mode: 'repulse',
-          },
-        },
-        modes: {
-          bubble: {
-            distance: 250,
-            duration: 2,
-            size: 0,
-            opacity: 0,
-          },
-          repulse: {
-            distance: 400,
-            duration: 4,
+          modes: {
+            bubble: {
+              distance: 250,
+              duration: 2,
+              size: 0,
+              opacity: 0,
+            },
+            repulse: {
+              distance: 400,
+              duration: 4,
+            },
           },
         },
-      },
-    }}
-  />
-);
+      }}
+    />
+  );
+};

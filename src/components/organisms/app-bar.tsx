@@ -49,6 +49,7 @@ export const AppBar = (): ReactElement => {
           justify="between"
           direction="row"
           margin="auto"
+          style={{zIndex: 1}}
         >
           <Box border={{color: 'accent-1'}} pad="xsmall">
             <Text color="accent-1" size="xxlarge" weight="bold">
@@ -56,12 +57,33 @@ export const AppBar = (): ReactElement => {
             </Text>
           </Box>
           {size === 'large' ? (
-            <Nav direction="row" width="50%" justify="end">
-              <Anchor label="Home" href="#home" icon={<Home />} color="accent-1" />
-              <Anchor label="About" href="#about" icon={<User />} color="accent-1" />
-              <Anchor label="Skills" href="#skills" icon={<Launch />} color="accent-1" />
-              <Anchor label="Experience" href="#experience" icon={<Briefcase />} color="accent-1" />
-              <Anchor label="Resume" href="#" icon={<DocumentText />} color="accent-1" />
+            <Nav direction="row" justify="end" align="baseline">
+              <Box>
+                <Anchor label="Home" href="#home" icon={<Home />} color="accent-1" />
+              </Box>
+              <Box>
+                <Anchor label="About" href="#about" icon={<User />} color="accent-1" />
+              </Box>
+              <Box>
+                <Anchor label="Skills" href="#skills" icon={<Launch />} color="accent-1" />
+              </Box>
+              <Box>
+                <Anchor
+                  label="Experience"
+                  href="#experience"
+                  icon={<Briefcase />}
+                  color="accent-1"
+                />
+              </Box>
+              <Box>
+                <Button
+                  label="Download CV"
+                  primary
+                  icon={<DocumentText />}
+                  color="accent-1"
+                  size="medium"
+                />
+              </Box>
             </Nav>
           ) : (
             <Box>
