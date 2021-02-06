@@ -19,7 +19,9 @@ export const About = (): ReactElement => {
         pad={{vertical: 'xlarge'}}
       >
         <Box justify="center" pad={{bottom: 'medium'}} style={{zIndex: 1}}>
-          <Heading color="accent-1">About me</Heading>
+          <Heading color="accent-1" level="2">
+            About me
+          </Heading>
         </Box>
         <Box
           direction={setForDevice<BoxProps['direction']>(['column', 'row'], size)}
@@ -39,7 +41,7 @@ export const About = (): ReactElement => {
                 style={{zIndex: 1}}
               >
                 <Heading
-                  level="2"
+                  level="3"
                   margin={{bottom: 'medium', top: 'none'}}
                   color="accent-1"
                   textAlign="center"
@@ -47,7 +49,7 @@ export const About = (): ReactElement => {
                   Hola, Soy Pablo Allendes
                 </Heading>
               </Box>
-              <Text color="accent-1" style={{zIndex: 1}}>
+              <Text color="white" style={{zIndex: 1}}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet porro molestias, enim
                 similique molestiae repellat vero ab in aut corrupti nihil, omnis voluptates aliquam
                 magnam. Saepe nobis dolore nesciunt sed!

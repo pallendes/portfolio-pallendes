@@ -41,7 +41,7 @@ export const AppBar = (): ReactElement => {
         pad={size === 'large' ? 'small' : 'medium'}
         elevation={scrolled ? 'small' : 'none'}
         style={styleProps}
-        height="82px"
+        height="auto"
       >
         <Box
           width={{width: '100%', max: '1140px'}}

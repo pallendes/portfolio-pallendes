@@ -15,7 +15,7 @@ export const Experience = (): ReactElement => {
         id="experience"
       >
         <Box justify="center" margin={{bottom: 'small'}}>
-          <Heading color="accent-1" level="1" style={{zIndex: 1}}>
+          <Heading color="accent-1" level="2" style={{zIndex: 1}}>
             My <b>Experience</b>
           </Heading>
         </Box>

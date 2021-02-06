@@ -33,7 +33,9 @@ export const ExperienceRow = ({
         pad={{right: 'small'}}
         margin={setForDevice<Record<string, string>>([{bottom: 'medium'}, {}], size)}
       >
-        <Box>{period}</Box>
+        <Box>
+          <Text color="white">{period}</Text>
+        </Box>
         <Box>
           <Text size="large" weight="bold" color="accent-1">
             {company}
@@ -45,7 +47,7 @@ export const ExperienceRow = ({
         pad={{right: 'small'}}
         margin={setForDevice<Record<string, string>>([{bottom: 'medium'}, {}], size)}
       >
-        <Text size="large" weight="bold" color="accent-1">
+        <Text size="large" weight="bold" color="white">
           {role}
         </Text>
       </Box>
@@ -53,7 +55,7 @@ export const ExperienceRow = ({
         width={setForDevice<string>(['100%', '40%'], size)}
         margin={setForDevice<Record<string, string>>([{bottom: 'medium'}, {}], size)}
       >
-        <Text color="accent-1">{description}</Text>
+        <Text color="white">{description}</Text>
       </Box>
     </Box>
   );

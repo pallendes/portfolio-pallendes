@@ -49,6 +49,7 @@ export const Home = (): ReactElement => {
                 color="accent-3"
                 size={setForDevice<string>(['1.8em', '2.8em'], size)}
                 weight="bold"
+                as="h1"
               >
                 Hello world!
               </Text>
@@ -64,6 +65,8 @@ export const Home = (): ReactElement => {
                 textAlign="center"
                 size={setForDevice<string>(['2.4em', '3.2em'], size)}
                 weight="bold"
+                as="h1"
+                margin="none"
               >
                 {size === 'large' ? (
                   <span>I&apos;M PABLO ALLENDES</span>
@@ -81,6 +84,8 @@ export const Home = (): ReactElement => {
                 size={setForDevice<string>(['1.8em', '2.8em'], size)}
                 weight="bold"
                 textAlign="center"
+                as="h2"
+                margin="none"
               >
                 <Typewriter
                   onInit={() => null}
@@ -100,6 +105,7 @@ export const Home = (): ReactElement => {
             align="center"
           >
             <img
+              alt=""
               style={{zIndex: 1}}
               src="/home-main.svg"
               width={setForDevice<string>(['240px', '380px', '560px'], size)}

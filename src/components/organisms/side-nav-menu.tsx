@@ -88,7 +88,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="Resume"
+              label="Download CV"
               href="#"
               icon={<DocumentText />}
               color="accent-1"

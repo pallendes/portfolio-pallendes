@@ -18,12 +18,12 @@ export const Skills = (): ReactElement => {
         id="skills"
       >
         <Box justify="center" pad={{bottom: 'medium'}}>
-          <Heading color="accent-1" level="1" textAlign="center" style={{zIndex: 1}}>
+          <Heading color="accent-1" level="2" textAlign="center" style={{zIndex: 1}}>
             Professional <b>Skillset</b>
           </Heading>
         </Box>
         <Box>
-          <Text color="accent-1" style={{zIndex: 1}}>
+          <Text color="white" style={{zIndex: 1}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quod perferendis
             aspernatur ullam id fuga perspiciatis reprehenderit, cum aliquid asperiores repellendus
             aliquam neque explicabo eos dolorum fugiat inventore? Maxime, porro?
@@ -57,6 +57,7 @@ export const Skills = (): ReactElement => {
             <Image
               style={{zIndex: 1}}
               fit="cover"
+              alt="Puntaje codersrank"
               src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=pallendes"
             />
           </Box>
