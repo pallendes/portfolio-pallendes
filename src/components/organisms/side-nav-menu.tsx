@@ -58,7 +58,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="About"
+              label="Sobre mí"
               href="#about"
               icon={<User />}
               color="accent-1"
@@ -78,7 +78,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="Experience"
+              label="Experiencia"
               href="#experience"
               icon={<Briefcase />}
               color="accent-1"
@@ -88,7 +88,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="Download CV"
+              label="Descarga mi CV"
               href="#"
               icon={<DocumentText />}
               color="accent-1"

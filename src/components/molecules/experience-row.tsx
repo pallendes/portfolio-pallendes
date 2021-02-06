@@ -23,7 +23,7 @@ export const ExperienceRow = ({
       border={{color: 'accent-1', side: 'bottom'}}
       pad={{bottom: 'medium'}}
       margin={setForDevice<Record<string, string>>(
-        [{bottom: 'large'}, {bottom: 'medium'}, {}],
+        [{bottom: 'large'}, {bottom: 'medium'}, {bottom: 'medium'}],
         size,
       )}
       style={{zIndex: 1}}

@@ -62,14 +62,14 @@ export const AppBar = (): ReactElement => {
                 <Anchor label="Home" href="#home" icon={<Home />} color="accent-1" />
               </Box>
               <Box>
-                <Anchor label="About" href="#about" icon={<User />} color="accent-1" />
+                <Anchor label="Sobre mí" href="#about" icon={<User />} color="accent-1" />
               </Box>
               <Box>
                 <Anchor label="Skills" href="#skills" icon={<Launch />} color="accent-1" />
               </Box>
               <Box>
                 <Anchor
-                  label="Experience"
+                  label="Experiencia"
                   href="#experience"
                   icon={<Briefcase />}
                   color="accent-1"
@@ -77,7 +77,7 @@ export const AppBar = (): ReactElement => {
               </Box>
               <Box>
                 <Button
-                  label="Download CV"
+                  label="Descarga mi CV"
                   primary
                   icon={<DocumentText />}
                   color="accent-1"

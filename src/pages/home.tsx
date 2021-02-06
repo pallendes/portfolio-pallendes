@@ -69,10 +69,10 @@ export const Home = (): ReactElement => {
                 margin="none"
               >
                 {size === 'large' ? (
-                  <span>I&apos;M PABLO ALLENDES</span>
+                  <span>Soy PABLO ALLENDES</span>
                 ) : (
                   <span>
-                    I&apos;M
+                    Soy
                     <br /> PABLO ALLENDES
                   </span>
                 )}

@@ -1,24 +1,23 @@
 import React, {ReactElement} from 'react';
 
 import {FacebookOption, Instagram, LinkedinOption} from 'grommet-icons';
-
 import {Anchor, Box, Footer as GrommetFooter, Text} from 'grommet';
 
 const Media = (): ReactElement => (
   <Box direction="row" gap="xxsmall" justify="center">
     <Anchor
-      a11yTitle="Share feedback on Github"
-      href="https://www.instagram.com/"
+      a11yTitle="Sígueme en ínstagram"
+      href="https://www.instagram.com/p_allendes/"
       icon={<Instagram color="brand" />}
     />
     <Anchor
-      a11yTitle="Chat with us on Slack"
-      href="https://www.facebook.com/"
+      a11yTitle="Sígueme en facebook"
+      href="https://www.facebook.com/paallendes/"
       icon={<FacebookOption color="brand" />}
     />
     <Anchor
-      a11yTitle="Follow us on Twitter"
-      href="https://twitter.com/"
+      a11yTitle="Sígueme en linkedin"
+      href="https://www.linkedin.com/in/paallendes/"
       icon={<LinkedinOption color="brand" />}
     />
   </Box>

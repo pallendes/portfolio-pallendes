@@ -19,14 +19,20 @@ export const Skills = (): ReactElement => {
       >
         <Box justify="center" pad={{bottom: 'medium'}}>
           <Heading color="accent-1" level="2" textAlign="center" style={{zIndex: 1}}>
-            Professional <b>Skillset</b>
+            <b>Skills técnicas</b>
           </Heading>
         </Box>
         <Box>
           <Text color="white" style={{zIndex: 1}}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quod perferendis
-            aspernatur ullam id fuga perspiciatis reprehenderit, cum aliquid asperiores repellendus
-            aliquam neque explicabo eos dolorum fugiat inventore? Maxime, porro?
+            A lo largo de mi carrera he dedicado la mayor parte del tiempo a especializarme en
+            tecnologías front-end (principalmente react), porque es lo que más disfruto por el
+            momento, sin embargo, en la mayoría de los proyectos en los que he estado me ha tocado
+            desarrollar micro servicios con tecnologías como spring-boot. También últimamente he
+            estado jugando bastante con python y pytorch para el estudio y desarrollo de modelos de
+            deep learning. <br />
+            <br />
+            En general soy bastante flexible para llevarme los conocimientos de un lenguaje a otro,
+            al final del día siento que todos tienen cosas en común y se parecen :).
           </Text>
         </Box>
         <Box
@@ -51,7 +57,7 @@ export const Skills = (): ReactElement => {
           <Box width="100%" pad="small">
             <Box justify="center" direction="row" pad={{bottom: 'medium'}}>
               <Heading level="3" color="accent-1" style={{zIndex: 1}}>
-                Codersrank Position
+                Puntaje CodersRank
               </Heading>
             </Box>
             <Image

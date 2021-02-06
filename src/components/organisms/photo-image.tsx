@@ -6,8 +6,7 @@ const cardStyles: CSSProperties = {
   height: '100%',
   background: 'grey',
   borderRadius: '5px',
-  backgroundImage:
-    'url(https://drscdn.500px.org/photo/435236/q%3D80_m%3D1500/v2?webp=true&sig=67031bdff6f582f3e027311e2074be452203ab637c0bd21d89128844becf8e40)',
+  backgroundImage: 'url(/pp.gif)',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   boxShadow: '0px 10px 30px -5px rgba(0, 0, 0, 0.3)',
