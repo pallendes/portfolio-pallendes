@@ -1,7 +1,7 @@
 import React, {ReactElement, useContext} from 'react';
 
 import {Anchor, Box, BoxProps, Button, Heading, ResponsiveContext, Text} from 'grommet';
-import {Facebook, Github, Instagram, Linkedin} from 'grommet-icons';
+import {Facebook, Instagram, Linkedin} from 'grommet-icons';
 import {PhotoImage} from '../components/organisms';
 import {setForDevice} from '../common/utils';
 
