@@ -2,9 +2,9 @@ import React, {ReactElement, useContext} from 'react';
 
 import {Box, BoxProps, Button, Heading, ResponsiveContext, Text} from 'grommet';
 import {Github, Instagram, Linkedin} from 'grommet-icons';
-import {PhotoImage} from '../../components/organisms';
-import {Particle} from '../../components/atoms';
-import {setForDevice} from '../../common/utils';
+import {PhotoImage} from '../components/organisms';
+import {Particle} from '../components/atoms';
+import {setForDevice} from '../common/utils';
 
 export const About = (): ReactElement => {
   const size = useContext<string>(ResponsiveContext);

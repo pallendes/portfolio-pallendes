@@ -5,12 +5,12 @@ import Typewriter from 'typewriter-effect';
 import {Box, BoxProps, Button, ResponsiveContext, Text} from 'grommet';
 import {Down} from 'grommet-icons';
 
-import {AppBar, Footer} from '../../components/organisms';
-import {Particle} from '../../components/atoms';
-import {About} from '../about';
-import {Skills} from '../skills';
-import {Experience} from '../experience';
-import {setForDevice} from '../../common/utils';
+import {AppBar, Footer} from '../components/organisms';
+import {Particle} from '../components/atoms';
+import {About} from './about';
+import {Skills} from './skills';
+import {Experience} from './experience';
+import {setForDevice} from '../common/utils';
 
 export const Home = (): ReactElement => {
   const size = useContext<string>(ResponsiveContext);
@@ -23,7 +23,7 @@ export const Home = (): ReactElement => {
           height="100vh"
         >
           <AppBar />
-          {/* <Particle /> */}
+          <Particle />
           <Box
             width={{width: '100%', max: '1140px'}}
             align="center"
@@ -75,8 +75,14 @@ export const Home = (): ReactElement => {
                     size={setForDevice<string>(['2.4em', '3.2em'], size)}
                     weight="bold"
                   >
-                    I&apos;M
-                    <br /> PABLO ALLENDES
+                    {size === 'large' ? (
+                      <span>I&apos;M PABLO ALLENDES</span>
+                    ) : (
+                      <span>
+                        I&apos;M
+                        <br /> PABLO ALLENDES
+                      </span>
+                    )}
                   </Text>
                 </Box>
                 <Box>
@@ -111,7 +117,7 @@ export const Home = (): ReactElement => {
             </Box>
             <Box width="100%" pad={setForDevice<string>(['unset', 'medium'], size)} height="10%">
               <Box align="center">
-                <Button icon={<Down />} primary size="small" style={{zIndex: 2}} />
+                <Button icon={<Down />} href="#about" primary size="small" style={{zIndex: 2}} />
               </Box>
             </Box>
           </Box>

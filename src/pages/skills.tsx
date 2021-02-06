@@ -1,14 +1,14 @@
 import React, {ReactElement, useContext} from 'react';
 import {Box, Heading, Image, ResponsiveContext, Text} from 'grommet';
-import {Particle, TechIcon} from '../../components/atoms';
-import {setForDevice} from '../../common/utils';
+import {Particle, TechIcon} from '../components/atoms';
+import {setForDevice} from '../common/utils';
 
 export const Skills = (): ReactElement => {
   const size = useContext(ResponsiveContext);
 
   return (
     <>
-      {/* <Particle /> */}
+      <Particle />
       <Box background="linear-gradient(0deg, rgba(125,76,219,1) 0%, rgba(253,111,255,1) 99%)" fill>
         <Box
           direction="column"
