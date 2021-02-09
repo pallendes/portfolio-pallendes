@@ -2,6 +2,7 @@ import React, {ReactElement, useContext} from 'react';
 import {Box, Heading, Image, ResponsiveContext, Text} from 'grommet';
 import {TechIcon} from '../components/atoms';
 import {setForDevice} from '../common/utils';
+import {FormattedMessage} from 'react-intl';
 
 export const Skills = (): ReactElement => {
   const size = useContext(ResponsiveContext);
@@ -19,20 +20,17 @@ export const Skills = (): ReactElement => {
       >
         <Box justify="center" pad={{bottom: 'medium'}}>
           <Heading color="accent-1" level="2" textAlign="center" style={{zIndex: 1}}>
-            <b>Skills técnicas</b>
+            <b>
+              <FormattedMessage id="skills.title" />
+            </b>
           </Heading>
         </Box>
         <Box>
           <Text color="white" style={{zIndex: 1}}>
-            A lo largo de mi carrera he dedicado la mayor parte del tiempo a especializarme en
-            tecnologías front-end (principalmente react), porque es lo que más disfruto por el
-            momento, sin embargo, en la mayoría de los proyectos en los que he estado me ha tocado
-            desarrollar micro servicios con tecnologías como spring-boot. También últimamente he
-            estado jugando bastante con python y pytorch para el estudio y desarrollo de modelos de
-            deep learning. <br />
+            <FormattedMessage id="skills.content.1" />
             <br />
-            En general soy bastante flexible para llevarme los conocimientos de un lenguaje a otro,
-            al final del día siento que todos tienen cosas en común y se parecen :).
+            <br />
+            <FormattedMessage id="skills.content.2" />
           </Text>
         </Box>
         <Box
@@ -57,15 +55,17 @@ export const Skills = (): ReactElement => {
           <Box width="100%" pad="small">
             <Box justify="center" direction="row" pad={{bottom: 'medium'}}>
               <Heading level="3" color="accent-1" style={{zIndex: 1}}>
-                Puntaje CodersRank
+                <FormattedMessage id="skills.score.title" />
               </Heading>
             </Box>
-            <Image
-              style={{zIndex: 1}}
-              fit="cover"
-              alt="Puntaje codersrank"
-              src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=pallendes"
-            />
+            <Box>
+              <Image
+                style={{zIndex: 1, maxWidth: '100%'}}
+                fit="contain"
+                alt="Puntaje codersrank"
+                src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=pallendes"
+              />
+            </Box>
           </Box>
         </Box>
       </Box>

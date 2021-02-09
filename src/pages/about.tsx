@@ -4,8 +4,10 @@ import {Anchor, Box, BoxProps, Button, Heading, ResponsiveContext, Text} from 'g
 import {Facebook, Instagram, Linkedin} from 'grommet-icons';
 import {PhotoImage} from '../components/organisms';
 import {setForDevice} from '../common/utils';
+import {FormattedMessage, useIntl} from 'react-intl';
 
 export const About = (): ReactElement => {
+  const intl = useIntl();
   const size = useContext<string>(ResponsiveContext);
 
   return (
@@ -20,7 +22,7 @@ export const About = (): ReactElement => {
       >
         <Box justify="center" pad={{bottom: 'medium'}} style={{zIndex: 1}}>
           <Heading color="accent-1" level="2">
-            Sobre mí
+            <FormattedMessage id="about.title" />
           </Heading>
         </Box>
         <Box
@@ -46,37 +48,36 @@ export const About = (): ReactElement => {
                   color="accent-1"
                   textAlign="center"
                 >
-                  Hola, Soy Pablo Allendes
+                  <FormattedMessage id="about.subtitle" />
                 </Heading>
               </Box>
               <Text color="white" style={{zIndex: 1}}>
-                Cuento con más de 6 años de experiencia en los cuáles he trabajado tanto en el
-                front-end como en el back-end del desarrollo de aplicaciones, utilizando tecnologías
-                tales como React, React-Native, Node y Spring. Mi experiencia de trabajo va desde
-                del desarrollo de aplicaciones para el sector financiero hasta para el sector de
-                aerolíneas, en la cual me desempeño actualmente.
+                <FormattedMessage id="about.content.1" />
                 <br />
                 <br />
-                Eso por el lado profesional, por el lado personal, tengo dos hobbies que me
-                apasionan bastante: la fotografía y la música, si quieres conocer un poco de lo que
-                hago en fotografía te invito a seguirme en este{' '}
-                <Anchor
-                  color="accent-1"
-                  target="_blank"
-                  href="https://www.instagram.com/p_allendes_fotografia/"
-                >
-                  instagram
-                </Anchor>{' '}
-                y si quieres saber un poco más de lo que hago en la música puedes buscar la banda a
-                la que pertenezco en{' '}
-                <Anchor
-                  color="accent-1"
-                  target="_blank"
-                  href="https://open.spotify.com/artist/7ysU9YkhXIqRWccmV96Wlg?si=8mH-BqQTQtKybFtonyqeVA"
-                >
-                  spotify
-                </Anchor>{' '}
-                :).
+                <FormattedMessage
+                  id="about.content.2"
+                  values={{
+                    instagram: (
+                      <Anchor
+                        color="accent-1"
+                        target="_blank"
+                        href="https://www.instagram.com/p_allendes_fotografia/"
+                      >
+                        instagram
+                      </Anchor>
+                    ),
+                    spotify: (
+                      <Anchor
+                        color="accent-1"
+                        target="_blank"
+                        href="https://open.spotify.com/artist/7ysU9YkhXIqRWccmV96Wlg?si=8mH-BqQTQtKybFtonyqeVA"
+                      >
+                        spotify
+                      </Anchor>
+                    ),
+                  }}
+                />
               </Text>
             </Box>
             <Box
@@ -111,13 +112,17 @@ export const About = (): ReactElement => {
                 <Button
                   primary
                   size="small"
-                  label="Contáctame"
+                  label={intl.formatMessage({id: 'about.button.contact'})}
                   href="https://www.linkedin.com/in/paallendes/"
                   target="_blank"
                 />
               </Box>
               <Box align="center">
-                <Button size="small" primary label="Descargar CV" />
+                <Button
+                  size="small"
+                  primary
+                  label={intl.formatMessage({id: 'about.button.download'})}
+                />
               </Box>
             </Box>
           </Box>

@@ -7,12 +7,13 @@ import {Down} from 'grommet-icons';
 
 import {AppBar} from '../components/organisms';
 import {setForDevice} from '../common/utils';
+import {FormattedMessage} from 'react-intl';
 
 export const Home = (): ReactElement => {
   const size = useContext<string>(ResponsiveContext);
 
   return (
-    <Box height="100vh">
+    <Box height="100vh" fill>
       <AppBar />
       <Box
         width={{width: '100%', max: '1140px'}}
@@ -51,7 +52,7 @@ export const Home = (): ReactElement => {
                 weight="bold"
                 as="h1"
               >
-                Hello world!
+                <FormattedMessage id="home.title.greeting" />
               </Text>
             </Box>
             <Box
@@ -69,12 +70,13 @@ export const Home = (): ReactElement => {
                 margin="none"
               >
                 {size === 'large' ? (
-                  <span>Soy PABLO ALLENDES</span>
+                  <FormattedMessage id="home.title.name" />
                 ) : (
-                  <span>
-                    Soy
-                    <br /> PABLO ALLENDES
-                  </span>
+                  <>
+                    <FormattedMessage id="home.title.name.mobile.1" />
+                    <br />
+                    <FormattedMessage id="home.title.name.mobile.2" />
+                  </>
                 )}
               </Text>
             </Box>

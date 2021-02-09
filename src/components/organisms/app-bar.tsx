@@ -5,8 +5,11 @@ import {Home, User, DocumentText, Launch, Briefcase, Menu} from 'grommet-icons';
 import {CSSProperties} from 'styled-components';
 
 import {SideNavMenu} from './side-nav-menu';
+import {useIntl} from 'react-intl';
 
 export const AppBar = (): ReactElement => {
+  const intl = useIntl();
+
   const size = useContext<string>(ResponsiveContext);
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [openedSideMenu, setOpenedSideMenu] = useState<boolean>(false);
@@ -59,17 +62,32 @@ export const AppBar = (): ReactElement => {
           {size === 'large' ? (
             <Nav direction="row" justify="end" align="baseline">
               <Box>
-                <Anchor label="Home" href="#home" icon={<Home />} color="accent-1" />
-              </Box>
-              <Box>
-                <Anchor label="Sobre mí" href="#about" icon={<User />} color="accent-1" />
-              </Box>
-              <Box>
-                <Anchor label="Skills" href="#skills" icon={<Launch />} color="accent-1" />
+                <Anchor
+                  label={intl.formatMessage({id: 'nav.home'})}
+                  href="#home"
+                  icon={<Home />}
+                  color="accent-1"
+                />
               </Box>
               <Box>
                 <Anchor
-                  label="Experiencia"
+                  label={intl.formatMessage({id: 'nav.about'})}
+                  href="#about"
+                  icon={<User />}
+                  color="accent-1"
+                />
+              </Box>
+              <Box>
+                <Anchor
+                  label={intl.formatMessage({id: 'nav.skills'})}
+                  href="#skills"
+                  icon={<Launch />}
+                  color="accent-1"
+                />
+              </Box>
+              <Box>
+                <Anchor
+                  label={intl.formatMessage({id: 'nav.experience'})}
                   href="#experience"
                   icon={<Briefcase />}
                   color="accent-1"
@@ -77,7 +95,7 @@ export const AppBar = (): ReactElement => {
               </Box>
               <Box>
                 <Button
-                  label="Descarga mi CV"
+                  label={intl.formatMessage({id: 'nav.button.download'})}
                   primary
                   icon={<DocumentText />}
                   color="accent-1"

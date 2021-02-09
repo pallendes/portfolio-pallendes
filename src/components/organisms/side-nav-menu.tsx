@@ -1,6 +1,7 @@
 import {Anchor, Box, Button, Nav, ResponsiveContext} from 'grommet';
 import {Briefcase, Close, DocumentText, Home, Launch, User} from 'grommet-icons';
 import React, {ReactElement, useContext, useEffect, useState} from 'react';
+import {useIntl} from 'react-intl';
 
 interface SideNavMenuProps {
   open: boolean;
@@ -8,6 +9,7 @@ interface SideNavMenuProps {
 }
 
 export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | null => {
+  const intl = useIntl();
   const [isHide, setIsHide] = useState<boolean>(true);
   const size = useContext(ResponsiveContext);
 
@@ -48,7 +50,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="Home"
+              label={intl.formatMessage({id: 'nav.home'})}
               href="#home"
               icon={<Home />}
               color="accent-1"
@@ -58,7 +60,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="Sobre mí"
+              label={intl.formatMessage({id: 'nav.about'})}
               href="#about"
               icon={<User />}
               color="accent-1"
@@ -68,7 +70,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="Skills"
+              label={intl.formatMessage({id: 'nav.experience'})}
               href="#skills"
               icon={<Launch />}
               color="accent-1"
@@ -78,7 +80,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="Experiencia"
+              label={intl.formatMessage({id: 'nav.experience'})}
               href="#experience"
               icon={<Briefcase />}
               color="accent-1"
@@ -88,7 +90,7 @@ export const SideNavMenu = ({open, onClose}: SideNavMenuProps): ReactElement | n
           <Box pad={{bottom: 'medium'}}>
             <Anchor
               size="large"
-              label="Descarga mi CV"
+              label={intl.formatMessage({id: 'nav.button.download'})}
               href="#"
               icon={<DocumentText />}
               color="accent-1"

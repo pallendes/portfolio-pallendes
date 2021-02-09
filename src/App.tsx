@@ -5,6 +5,7 @@ import {deepMerge} from 'grommet/utils';
 import GlobalStyle from './common/global-style';
 
 import {Main} from './pages/main';
+import {LanguajeContainer} from './languaje-container';
 
 const App = (): ReactElement => {
   const customBreackpoints = deepMerge(grommet, {
@@ -23,11 +24,13 @@ const App = (): ReactElement => {
       <GlobalStyle />
       <Grommet theme={customBreackpoints}>
         <Router>
-          <Switch>
-            <Route path="/">
-              <Main />
-            </Route>
-          </Switch>
+          <LanguajeContainer>
+            <Switch>
+              <Route path="/">
+                <Main />
+              </Route>
+            </Switch>
+          </LanguajeContainer>
         </Router>
       </Grommet>
     </>
