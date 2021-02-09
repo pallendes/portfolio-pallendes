@@ -33,8 +33,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts}' --quiet --fix",
-    "extract": "formatjs extract"
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts}' --quiet --fix"
   },
   "eslintConfig": {
     "extends": [

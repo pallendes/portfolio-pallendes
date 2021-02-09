@@ -13,7 +13,7 @@ export const Home = (): ReactElement => {
   const size = useContext<string>(ResponsiveContext);
 
   return (
-    <Box height="100vh" fill>
+    <Box height="100vh" style={{minHeight: '100vh'}}>
       <AppBar />
       <Box
         width={{width: '100%', max: '1140px'}}
