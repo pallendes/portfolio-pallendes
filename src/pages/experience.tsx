@@ -26,7 +26,13 @@ export const Experience = (): ReactElement => {
           </Heading>
         </Box>
         <Box margin={{bottom: 'large'}} style={{zIndex: 1}}>
-          <Button primary size="large" label="Download CV" />
+          <Button
+            primary
+            size="large"
+            label={intl.formatMessage({id: 'experience.content.download'})}
+            target="_blank"
+            href="https://drive.google.com/file/d/1NKQtbJP0P0uhHLAn1HVqnqEgkvmyOOy7/view?usp=sharing"
+          />
         </Box>
         <ExperienceRow
           period={intl.formatMessage({id: 'experience.content.row.1.period'})}

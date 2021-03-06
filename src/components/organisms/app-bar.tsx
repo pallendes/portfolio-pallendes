@@ -100,6 +100,8 @@ export const AppBar = (): ReactElement => {
                   icon={<DocumentText />}
                   color="accent-1"
                   size="medium"
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1NKQtbJP0P0uhHLAn1HVqnqEgkvmyOOy7/view?usp=sharing"
                 />
               </Box>
             </Nav>
