@@ -122,6 +122,8 @@ export const About = (): ReactElement => {
                   size="small"
                   primary
                   label={intl.formatMessage({id: 'about.button.download'})}
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1NKQtbJP0P0uhHLAn1HVqnqEgkvmyOOy7/view?usp=sharing"
                 />
               </Box>
             </Box>
