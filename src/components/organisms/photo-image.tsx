@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
+import {Box} from 'grommet';
 import React, {CSSProperties, ReactElement} from 'react';
 import {useSpring, animated} from 'react-spring';
 
 const cardStyles: CSSProperties = {
-  height: '100%',
+  height: '350px',
+  width: '350px',
   background: 'grey',
-  borderRadius: '5px',
-  backgroundImage: 'url(/pp.gif)',
+  borderRadius: '50%',
+  backgroundImage: 'url(/pp.png)',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   boxShadow: '0px 10px 30px -5px rgba(0, 0, 0, 0.3)',
@@ -30,13 +32,15 @@ export const PhotoImage = (): ReactElement => {
   }));
 
   return (
-    <animated.div
-      className="card"
-      onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
-      onMouseLeave={() => set({xys: [0, 0, 1]})}
-      // @ts-ignore
-      // eslint-disable-next-line react/prop-types
-      style={{...cardStyles, transform: props.xys.interpolate(trans)}}
-    />
+    <Box align="center">
+      <animated.div
+        className="card"
+        onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
+        onMouseLeave={() => set({xys: [0, 0, 1]})}
+        // @ts-ignore
+        // eslint-disable-next-line react/prop-types
+        style={{...cardStyles, transform: props.xys.interpolate(trans)}}
+      />
+    </Box>
   );
 };
