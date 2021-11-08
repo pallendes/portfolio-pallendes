@@ -101,7 +101,7 @@ export const AppBar = (): ReactElement => {
                   color="accent-1"
                   size="medium"
                   target="_blank"
-                  href="https://drive.google.com/file/d/1NKQtbJP0P0uhHLAn1HVqnqEgkvmyOOy7/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1t1QQ67DeRCf56ax3oH8dQdhVOAAGvHhP/view?usp=sharing"
                 />
               </Box>
             </Nav>

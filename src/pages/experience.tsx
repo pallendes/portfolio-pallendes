@@ -46,6 +46,12 @@ export const Experience = (): ReactElement => {
           role={intl.formatMessage({id: 'experience.content.row.2.role'})}
           description={intl.formatMessage({id: 'experience.content.row.2.description'})}
         />
+        <ExperienceRow
+          period={intl.formatMessage({id: 'experience.content.row.3.period'})}
+          company={intl.formatMessage({id: 'experience.content.row.3.company'})}
+          role={intl.formatMessage({id: 'experience.content.row.3.role'})}
+          description={intl.formatMessage({id: 'experience.content.row.3.description'})}
+        />
       </Box>
     </Box>
   );

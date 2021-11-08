@@ -21,12 +21,16 @@
   "experience.title.1": "Professional",
   "experience.title.2": "Experience",
   "experience.content.download": "Download CV",
-  "experience.content.row.1.period": "2017 - Now",
-  "experience.content.row.1.company": "Globant - Latam Airlines",
-  "experience.content.row.1.role": "Web UI Developer/Full Stack Developer",
-  "experience.content.row.1.description": "Software development for the Latam Airlines client. During this period, I worked on projects such as Latam travel, where I had the opportunity to participate in the development of web applications for the sale of tourist packages, mainly using technologies such as React and Spring. I am currently participating in the development of the web application for the electronic wallet of the company, using technologies such as React, Spring and google cloud services.",
-  "experience.content.row.2.period": "2015 - 2017",
-  "experience.content.row.2.company": "Indra - BBVA",
+  "experience.content.row.1.period": "2021 - Now",
+  "experience.content.row.1.company": "Nubox",
+  "experience.content.row.1.role": "Senior Frontend Developer",
+  "experience.content.row.1.description": "Worked on the construction of a SaaS platform for managing small and medium-sized companies. This platform will be available for all Latin American countries. Here I helped to define the entire front-end architecture, from the definition of all the technologies the teams will use to how we are going deploy the apps using AWS tools. I also created a monorepo in which all the shared dependencies will be placed using the RushJS tool and a design system using theme-ui.",
+  "experience.content.row.2.period": "2017 - 2021",
+  "experience.content.row.2.company": "Globant - Latam Airlines",
   "experience.content.row.2.role": "Web UI Developer/Full Stack Developer",
-  "experience.content.row.2.description": "Development of projects for the banking sector, among which BBVA Bloter stands out, web software that centralizes the control of all monetary exchange operations, interconnecting both internal and external systems nationwide. The system was developed from scratch in a short time. The software was built on technologies such as Spring 4 (Rest Services), SOAP Web Services (JAX-WS), WebSphere MQ Queues, Websphere AS, AngularJS, IBM DB2, among others."
+  "experience.content.row.2.description": "Software development for the Latam Airlines client. During this period, I worked on projects such as Latam travel, where I had the opportunity to participate in the development of web applications for the sale of tourist packages, mainly using technologies such as React and Spring. I am currently participating in the development of the web application for the electronic wallet of the company, using technologies such as React, Spring and google cloud services.",
+  "experience.content.row.3.period": "2015 - 2017",
+  "experience.content.row.3.company": "Indra - BBVA",
+  "experience.content.row.3.role": "Web UI Developer/Full Stack Developer",
+  "experience.content.row.3.description": "Development of projects for the banking sector, among which BBVA Bloter stands out, web software that centralizes the control of all monetary exchange operations, interconnecting both internal and external systems nationwide. The system was developed from scratch in a short time. The software was built on technologies such as Spring 4 (Rest Services), SOAP Web Services (JAX-WS), WebSphere MQ Queues, Websphere AS, AngularJS, IBM DB2, among others."
 }

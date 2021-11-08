@@ -17,12 +17,9 @@ export const Particle = (): ReactElement => {
         particles: {
           number: {
             value: 160,
-            density: {
-              enable: false,
-            },
           },
           size: {
-            value: 3,
+            value: 6,
             random: true,
             anim: {
               speed: 4,

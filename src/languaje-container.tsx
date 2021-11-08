@@ -27,6 +27,7 @@ export const LanguajeContainer = ({children}: LenguajeContainerProps): ReactElem
     }
   }, [queryParams.get('lang')]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const messages: any = {
     en: locale_en,
     es: locale_es,
