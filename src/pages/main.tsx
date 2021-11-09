@@ -10,17 +10,19 @@ import {Particle} from '../components/atoms';
 
 export const Main = (): ReactElement => {
   return (
-    <Box background="linear-gradient(0deg, rgba(125, 76, 219, 1) 0%, rgba(61, 19, 141, 1) 99%)">
-      <Box id="page" height="100%">
-        <GrommetMain>
-          <Particle />
-          <Home />
-          <About />
-          <Skills />
-          <Experience />
-        </GrommetMain>
-        <Footer />
+    <>
+      <Box background="linear-gradient(0deg, rgba(125, 76, 219, 1) 0%, rgba(61, 19, 141, 1) 99%)">
+        <Box id="page" height="100%">
+          <GrommetMain>
+            <Home />
+            <About />
+            <Skills />
+            <Experience />
+          </GrommetMain>
+          <Footer />
+        </Box>
       </Box>
-    </Box>
+      <Particle />
+    </>
   );
 };

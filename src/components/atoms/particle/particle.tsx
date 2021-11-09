@@ -1,65 +1,105 @@
-import React, {ReactElement, useLayoutEffect, useState} from 'react';
-import Particles from 'react-particles-js';
+import React, {ReactElement} from 'react';
+import Particles from 'react-tsparticles';
 
 import './particle.css';
 
 export const Particle = (): ReactElement => {
-  const [pageHeight, setPageHeight] = useState<number>(0);
-
-  useLayoutEffect(() => {
-    setPageHeight(document.getElementById('page')?.clientHeight || 0);
-  });
-
   return (
     <Particles
-      height={`${pageHeight}px`}
+      className="particles"
       params={{
+        fpsLimit: 60,
+        interactivity: {
+          events: {
+            onHover: {
+              enable: true,
+              mode: 'repulse',
+            },
+            resize: true,
+          },
+          modes: {
+            bubble: {
+              distance: 400,
+              duration: 2,
+              opacity: 0.5,
+              size: 10,
+            },
+            push: {
+              quantity: 4,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+          },
+        },
         particles: {
           number: {
-            value: 160,
-          },
-          size: {
-            value: 6,
-            random: true,
-            anim: {
-              speed: 4,
-              size_min: 0.3,
+            value: 20,
+            density: {
+              enable: true,
+              value_area: 800,
             },
           },
           line_linked: {
             enable: false,
           },
           move: {
+            direction: 'none',
+            enable: true,
+            outMode: 'bounce',
+            random: false,
+            speed: 2,
+            straight: false,
+          },
+          opacity: {
+            value: 0.5,
+          },
+          shape: {
+            type: ['image', 'circle'],
+            image: [
+              {
+                src: '/html-5.svg',
+                height: 20,
+                width: 20,
+              },
+              {
+                src: '/node-js.svg',
+                height: 20,
+                width: 20,
+              },
+              {
+                src: '/javascript.svg',
+                height: 20,
+                width: 20,
+              },
+              {
+                src: '/react.svg',
+                height: 20,
+                width: 20,
+              },
+              {
+                src: '/typescript.svg',
+                height: 20,
+                width: 20,
+              },
+            ],
+          },
+          color: {
+            value: '#CCC',
+          },
+          size: {
+            value: 20,
             random: true,
-            speed: 1,
-            direction: 'top',
-            out_mode: 'out',
-          },
-        },
-        interactivity: {
-          events: {
-            onhover: {
+            anim: {
               enable: true,
-              mode: 'bubble',
-            },
-            onclick: {
-              enable: true,
-              mode: 'repulse',
-            },
-          },
-          modes: {
-            bubble: {
-              distance: 250,
-              duration: 2,
-              size: 0,
-              opacity: 0,
-            },
-            repulse: {
-              distance: 400,
-              duration: 4,
+              speed: 2,
+              size_min: 10,
+              sync: false,
             },
           },
         },
+        retina_detect: true,
       }}
     />
   );

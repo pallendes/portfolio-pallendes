@@ -39,7 +39,7 @@ export const PhotoImage = (): ReactElement => {
         onMouseLeave={() => set({xys: [0, 0, 1]})}
         // @ts-ignore
         // eslint-disable-next-line react/prop-types
-        style={{...cardStyles, transform: props.xys.interpolate(trans)}}
+        style={{...cardStyles, transform: props.xys.interpolate(trans), zIndex: 1}}
       />
     </Box>
   );
