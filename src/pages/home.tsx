@@ -116,7 +116,13 @@ export const Home = (): ReactElement => {
         </Box>
         <Box width="100%" pad={setForDevice<string>(['unset', 'medium'], size)} height="10%">
           <Box align="center">
-            <Button icon={<Down />} href="#about" primary size="small" style={{zIndex: 2}} />
+            <Button
+              icon={<Down a11yTitle="Down icon" />}
+              href="#about"
+              primary
+              size="small"
+              style={{zIndex: 2}}
+            />
           </Box>
         </Box>
       </Box>

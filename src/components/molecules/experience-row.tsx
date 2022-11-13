@@ -7,6 +7,7 @@ interface ExperienceRowProps {
   company: string;
   role: string;
   description: string;
+  location: string;
 }
 
 export const ExperienceRow = ({
@@ -14,6 +15,7 @@ export const ExperienceRow = ({
   company,
   role,
   description,
+  location,
 }: ExperienceRowProps): ReactElement => {
   const size = useContext<string>(ResponsiveContext);
 
@@ -40,6 +42,9 @@ export const ExperienceRow = ({
           <Text size="large" weight="bold" color="accent-1">
             {company}
           </Text>
+        </Box>
+        <Box>
+          <Text color="white">{location}</Text>
         </Box>
       </Box>
       <Box

@@ -1,8 +1,8 @@
+import {Box, Heading, ResponsiveContext, Text} from 'grommet';
 import React, {ReactElement, useContext} from 'react';
-import {Box, Heading, Image, ResponsiveContext, Text} from 'grommet';
-import {TechIcon} from '../components/atoms';
-import {setForDevice} from '../common/utils';
 import {FormattedMessage} from 'react-intl';
+import {setForDevice} from '../common/utils';
+import {TechIcon} from '../components/atoms';
 
 export const Skills = (): ReactElement => {
   const size = useContext(ResponsiveContext);
@@ -51,7 +51,7 @@ export const Skills = (): ReactElement => {
           <TechIcon icon="devicon-nodejs-plain" />
           <TechIcon icon="devicon-git-plain" />
         </Box>
-        <Box direction="row" pad={{top: 'small'}}>
+        {/* <Box direction="row" pad={{top: 'small'}}>
           <Box width="100%" pad="small">
             <Box justify="center" direction="row" pad={{bottom: 'medium'}}>
               <Heading level="3" color="accent-1" style={{zIndex: 1}}>
@@ -67,7 +67,7 @@ export const Skills = (): ReactElement => {
               />
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

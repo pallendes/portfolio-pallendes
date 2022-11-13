@@ -1,4 +1,4 @@
-import React, {ReactElement, ReactNode, useEffect, useState} from 'react';
+import React, {ReactElement, useEffect, useState} from 'react';
 
 import locale_es from './lang/es.json';
 import locale_en from './lang/en.json';
@@ -6,7 +6,8 @@ import {IntlProvider} from 'react-intl';
 import {useLocation} from 'react-router-dom';
 
 interface LenguajeContainerProps {
-  children: ReactNode;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: any;
 }
 
 function useQuery() {
@@ -15,6 +16,7 @@ function useQuery() {
 
 export const LanguajeContainer = ({children}: LenguajeContainerProps): ReactElement => {
   const queryParams = useQuery();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [locale, setLocale] = useState<string>('es');
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export const LanguajeContainer = ({children}: LenguajeContainerProps): ReactElem
   };
 
   return (
-    <IntlProvider key={locale} locale={locale} messages={messages[locale]}>
+    <IntlProvider key="en" locale="en-EN" messages={messages['en']}>
       {children}
     </IntlProvider>
   );

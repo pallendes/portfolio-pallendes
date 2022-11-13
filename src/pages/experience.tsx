@@ -35,22 +35,32 @@ export const Experience = (): ReactElement => {
           />
         </Box>
         <ExperienceRow
+          period={intl.formatMessage({id: 'experience.content.row.0.period'})}
+          company={intl.formatMessage({id: 'experience.content.row.0.company'})}
+          role={intl.formatMessage({id: 'experience.content.row.0.role'})}
+          description={intl.formatMessage({id: 'experience.content.row.0.description'})}
+          location={intl.formatMessage({id: 'experience.content.row.0.location'})}
+        />
+        <ExperienceRow
           period={intl.formatMessage({id: 'experience.content.row.1.period'})}
           company={intl.formatMessage({id: 'experience.content.row.1.company'})}
           role={intl.formatMessage({id: 'experience.content.row.1.role'})}
           description={intl.formatMessage({id: 'experience.content.row.1.description'})}
+          location={intl.formatMessage({id: 'experience.content.row.1.location'})}
         />
         <ExperienceRow
           period={intl.formatMessage({id: 'experience.content.row.2.period'})}
           company={intl.formatMessage({id: 'experience.content.row.2.company'})}
           role={intl.formatMessage({id: 'experience.content.row.2.role'})}
           description={intl.formatMessage({id: 'experience.content.row.2.description'})}
+          location={intl.formatMessage({id: 'experience.content.row.2.location'})}
         />
         <ExperienceRow
           period={intl.formatMessage({id: 'experience.content.row.3.period'})}
           company={intl.formatMessage({id: 'experience.content.row.3.company'})}
           role={intl.formatMessage({id: 'experience.content.row.3.role'})}
           description={intl.formatMessage({id: 'experience.content.row.3.description'})}
+          location={intl.formatMessage({id: 'experience.content.row.3.location'})}
         />
       </Box>
     </Box>

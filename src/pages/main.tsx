@@ -3,10 +3,10 @@ import React, {ReactElement} from 'react';
 import {Box, Main as GrommetMain} from 'grommet';
 import {Footer} from '../components/organisms';
 import {About} from './about';
-import {Skills} from './skills';
 import {Experience} from './experience';
 import {Home} from './home';
 import {Particle} from '../components/atoms';
+import {Skills} from './skills';
 
 export const Main = (): ReactElement => {
   return (
